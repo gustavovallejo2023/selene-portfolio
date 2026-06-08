@@ -177,6 +177,62 @@ section {
   transform: scale(1.03);
 }
 
+.gallery-section {
+  background: #fff;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  color: #777;
+  margin-top: -25px;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  columns: 3;
+  column-gap: 20px;
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+  background: white;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  transition: .4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  .gallery-grid {
+    columns: 2;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .gallery-grid {
+    columns: 1;
+  }
+
+}
+
 /* ==========================
    CONTACTO
 ========================== */

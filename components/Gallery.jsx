@@ -1,41 +1,39 @@
-const images = [
- "/nails/1.jpg",
- "/nails/2.jpg",
- "/nails/3.jpg",
- "/nails/4.jpg",
- "/nails/5.jpg",
- "/nails/6.jpg"
-];
+import Image from "next/image";
+
+const images = Array.from({ length: 18 }, (_, i) => `/nails/${i + 1}.jpg`);
 
 export default function Gallery() {
+  return (
+    <section
+      id="galeria"
+      className="gallery-section"
+    >
+      <div className="container">
 
- return(
+        <h2>Mis Trabajos</h2>
 
-  <section
-   id="galeria"
-   className="gallery-section"
-  >
+        <p className="gallery-subtitle">
+          Algunos de los diseños realizados para mis clientas 💅✨
+        </p>
 
-   <div className="container">
+        <div className="gallery-grid">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="gallery-item"
+            >
+              <Image
+                src={img}
+                alt={`Diseño de uñas ${index + 1}`}
+                width={600}
+                height={800}
+                className="gallery-image"
+              />
+            </div>
+          ))}
+        </div>
 
-    <h2>Mis Trabajos</h2>
-
-    <div className="gallery-grid">
-
-      {images.map((img,index)=>(
-
-       <img
-        key={index}
-        src={img}
-        alt=""
-       />
-
-      ))}
-
-    </div>
-
-   </div>
-
-  </section>
- );
+      </div>
+    </section>
+  );
 }
