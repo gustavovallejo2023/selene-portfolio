@@ -1,34 +1,65 @@
 export default function Navbar() {
   return (
-    <nav className="navbar-custom">
+    <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
 
-      <div className="logo">
-        Brillo de Lunna ✨
+      <div className="container">
+
+        <a
+          className="navbar-brand"
+          href="#inicio"
+        >
+          Brillo de Lunna ✨
+        </a>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          className="collapse navbar-collapse"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ms-auto">
+
+            <li className="nav-item">
+              <a className="nav-link" href="#inicio">
+                Inicio
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#servicios">
+                Servicios
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#galeria">
+                Galería
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#sobre-mi">
+                Sobre mí
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#contacto">
+                Contacto
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
       </div>
-
-      <ul>
-
-        <li>
-          <a href="#inicio">Inicio</a>
-        </li>
-
-        <li>
-          <a href="#servicios">Servicios</a>
-        </li>
-
-        <li>
-          <a href="#galeria">Galería</a>
-        </li>
-
-        <li>
-          <a href="#sobre-mi">Sobre mí</a>
-        </li>
-
-        <li>
-          <a href="#contacto">Contacto</a>
-        </li>
-
-      </ul>
 
     </nav>
   );
