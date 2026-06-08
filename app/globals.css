@@ -57,3 +57,130 @@ body{
 
   gap:15px;
 }
+
+.navbar-custom{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:999;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 80px;
+
+    backdrop-filter:blur(12px);
+
+    background:rgba(255,255,255,.6);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.navbar-custom ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:30px;
+
+    margin:0;
+}
+
+.navbar-custom a{
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:600;
+}
+
+.cards{
+
+ display:grid;
+
+ grid-template-columns:
+ repeat(auto-fit,minmax(250px,1fr));
+
+ gap:30px;
+}
+
+.service-card{
+
+ background:white;
+
+ padding:40px;
+
+ border-radius:20px;
+
+ text-align:center;
+
+ box-shadow:
+ 0 15px 30px rgba(0,0,0,.08);
+
+ transition:.3s;
+}
+
+.service-card:hover{
+
+ transform:translateY(-10px);
+}
+
+.gallery-grid{
+
+ columns:3;
+ gap:20px;
+}
+
+.gallery-grid img{
+
+ width:100%;
+
+ margin-bottom:20px;
+
+ border-radius:20px;
+
+ transition:.3s;
+
+ cursor:pointer;
+}
+
+.gallery-grid img:hover{
+
+ transform:scale(1.03);
+}
+
+.whatsapp-btn{
+
+  position: fixed;
+
+  bottom: 25px;
+  right: 25px;
+
+  z-index: 9999;
+
+  transition: .3s;
+}
+
+.whatsapp-btn img{
+
+  width: 75px;
+
+  filter:
+    drop-shadow(
+      0 10px 20px rgba(0,0,0,.2)
+    );
+}
+
+.whatsapp-btn:hover{
+
+  transform: scale(1.1);
+}
